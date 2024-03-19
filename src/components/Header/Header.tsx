@@ -1,6 +1,6 @@
 import React from 'react'
 import { HeaderContainer, HeaderWrap,  NavWrap, UserContainer, Wrapper } from './Header.styled';
-import Navigation from '../Navigation/Navagation';
+// import Navigation from '../Navigation/Navagation';
 
 
 const Header: React.FC = () => {
@@ -10,7 +10,7 @@ const Header: React.FC = () => {
       <HeaderWrap>
           <UserContainer>
             <NavWrap>
-              <Navigation />
+              {/* <Navigation /> */}
             </NavWrap>
           </UserContainer>
         </HeaderWrap>

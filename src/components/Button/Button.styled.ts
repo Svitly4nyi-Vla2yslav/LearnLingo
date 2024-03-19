@@ -1,21 +1,33 @@
 import styled from 'styled-components';
 import { ButtonProps } from './Button';
 
-export const StyledButton = styled.button<ButtonProps>`
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.43;
-  border: none;
+export const MyButton = styled.button<ButtonProps>`
+display: flex;
+justify-content: center;
+align-items: center;
 
-  padding: ${({ padY, padX }) => `${padY}px ${padX}px`};
-  border-radius: 12px;
-  background: #3470ff;
+padding: 16px 32px;
+border-radius: 12px;
+border: none;
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+color: #121417;;
+font-family: Roboto;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 1.55;
+background-color: isActive ? "#f4c550" : "#EBD8FF"
+
+transform: scale(1);
+transition: transform 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
+
+@media screen and (min-width: 500px) {
+  padding: 16px 88px;
+}
 
   &:hover,
   &:focus {
-    background: #0b44cd;
+    transform: scale(1.1);
+    transition: transform 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
   }
 `;

@@ -1,20 +1,28 @@
-import { StyledButton } from './Button.styled';
-import React, { MouseEvent, ReactNode } from 'react';
+import React from "react";
+import  { MyButton }  from './Button.styled';
 
 interface ButtonProps {
-  padY?: number;
-  padX?: number;
-  onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
-  children?: ReactNode;
-}
+    isActive?: boolean;
+    onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+    children?: string;
+    type?: string;
+    style?: object;
 
-const Button: React.FC<ButtonProps> = ({ padY, padX, onClick, children }) => {
-  return (
-    <StyledButton padY={padY} padX={padX} onClick={onClick}>
-      {children}
-    </StyledButton>
-  );
-};
-
-export default Button;
-export type { ButtonProps };
+  }
+const Button: React.FC<ButtonProps> = ({ isActive = true, onClick, children}) => {
+    return (
+      <MyButton
+        onClick={onClick}
+        type="button"
+        style={{
+          backgroundColor: isActive ? "#f4c550" : "#EBD8FF",
+        }}
+        
+      >
+        {children}
+      </MyButton>
+    );
+  };
+  
+  export default Button;
+  export type { ButtonProps };
