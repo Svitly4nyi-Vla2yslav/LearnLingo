@@ -1,30 +1,47 @@
 
-// import  { lazy } from 'react'
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import { Layout } from './components/Layout/Layout';
+import { lazy, useEffect, useState } from 'react';
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from './firebase';
+import { PrivateRoute } from './components/Navigation/PrivateRoute';
 
-import HomePage from './pages/HomePage/HomePage';
-// import CatalogPage from './pages/CatalogPage/CatalogPage';
-// import FavoritesPage from './pages/FavoritesPage/FavoritesPage';
+const Home = lazy(() => import('./pages/HomePage/HomePage'));
+const Teachers = lazy(() => import('./pages/Teachers/Teachers'));
+const Favorites = lazy(() => import('./pages/FavoritesPage/FavoritesPage'));
 
+export const App = () => {
+  const [authUser, setAuthUset] = useState(auth.currentUser);
 
-// const HomePage = lazy(() => import("./pages/HomePage/HomePage"))
-// const CatalogPage = lazy(() => import("./pages/CatalogPage/CatalogPage"))
-// const FavoritesPage = lazy(() => import("./pages/FavoritesPage/FavoritesPage"))
+  useEffect(() => {
+    const listen = onAuthStateChanged(auth, user => {
+      if (user) {
+        setAuthUset(user);
+      } else {
+        setAuthUset(null);
+      }
+    });
+    return () => {
+      listen();
+    };
+  }, []);
 
-const App = () => {
-  return (
  
+  return (
     <Routes>
-      <Route path="/" element={<HomePage/>}>
-        {/* <Route index element={<HomePage/>}/> */}
-        {/* <Route path="catalog" element={<CatalogPage/>}/>
-        <Route path="price/" element={<FavoritesPage/>}/> */}
-        <Route path="*" element={<Navigate to="/" />} />
+      <Route path="/" element={<Layout authUser={authUser} />}>
+        <Route index element={<Home />} />
+        <Route path="teachers" element={<Teachers authUser={authUser} />} />
+        <Route
+          path="favorites"
+          element={
+            <PrivateRoute authUser={authUser}>
+              <Favorites  authUser={authUser}/>
+            </PrivateRoute>
+          }
+        />
+        <Route path="*" element={<Home />} />
       </Route>
-      
     </Routes>
-   
-  )
-}
-
-export default App
+  );
+};

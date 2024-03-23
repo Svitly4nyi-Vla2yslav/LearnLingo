@@ -1,214 +1,226 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
+import  GirlSvg from '../../assets/girl.svg';
+import MacYellSvg  from '../../assets/iMac-yellow.svg';
 
-export const HomeMeinBox = styled.div`
-  display: flex;
-  gap: 24px;
-  flex-direction: column;
+import { Link } from 'react-router-dom';
 
-  @media screen and (min-width: 1440px) {
-  }
+export const HomeContainer = styled.div`
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
 `;
-  
-export const Hero = styled.div`
- display: flex;
-  flex-direction: column;
+
+export const InfoContainer = styled.div`
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
   gap: 24px;
+  justify-content: center;
+`;
+
+// ----------------MAIN TEXT------------------
+export const StartContainer = styled.div`
+  border-radius: 30px;
+  background: #f8f8f8;
+  width: 100%;
+  padding-left: 5px;
+  max-width: 320px;
+  padding-right: 5px;
+  /* height: 450px; */
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  @media screen and (min-width: 1440px) {
-    flex-direction: row;
+  @media screen and (min-width: 767px) {
+    /* width: 330px; */
   }
 
-`;
- 
-
-export const HeroAbout = styled.div`
- display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  border-radius: 30px;
-  background: var(--grey-bg);
-  padding: 24px 16px;
-  width: 100%;
-
-  @media screen and (min-width: 320px) {
-  }
-
-  @media screen and (min-width: 768px) {
-    padding: 49px 32px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    align-items: flex-start;
-    width: 720px;
+  @media screen and (min-width: 1400px) {
+    min-width: 330px;
+    max-width: 720px;
     height: 530px;
-    padding: 98px 64px;
+    padding-left: 70px;
+    display: block;
   }
 `;
- 
 
-
-export const HeroTitle = styled.h1`
- color: var(--main-black);
-  font-family: Roboto;
-  font-size: 48px;
-  font-style: normal;
+export const Title = styled.h1`
   font-weight: 500;
-  line-height: 1.16;
-  letter-spacing: -0.96px;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
+  font-size: 28px;
+  margin-top: 50px;
   text-align: center;
 
-  margin-bottom: 32px;
-
-  @media screen and (min-width: 1440px) {
-    text-align: left;
-    width: 548px;
+  @media screen and (min-width: 1400px) {
+    max-width: 548px;
+    margin-top: 105px;
+    font-size: 48px;
+    text-align: start;
   }
-` ;
- 
-
-
-export const HeroTitleAccentSpan = styled.span`
-  color: var(--main-black);
-  font-family: Roboto;
-  font-size: 48px;
+`;
+export const Lang = styled.span`
   font-style: italic;
   font-weight: 400;
-  line-height: 56px;
-  letter-spacing: -0.96px;
+  background: ${({ theme }) => theme.lightYellow};
+`;
 
-  border-radius: 16px;
-  background-color: var(--latte-bg);
-` ;
-
-
-export const HeroAboutText = styled.p`
-color: var(--main-black);
-  font-family: Roboto;
-  font-size: 16px;
-  font-style: normal;
+export const Text = styled.p`
   font-weight: 400;
+  font-size: 16px;
   line-height: 1.37;
+  letter-spacing: -0.02em;
+  margin-top: 32px;
+  margin-bottom: 64px;
   text-align: center;
-  letter-spacing: -0.32px;
-  margin-bottom: 32px;
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1400px) {
     width: 471px;
-    text-align: left;
-    margin-bottom: 64px;
+    text-align: start;
   }
-` ;
+`;
 
-export const HeroImg = styled.div`
+export const LinkStart = styled(Link)`
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.56;
+  border-radius: 12px;
+  padding: 16px 48px;
+  color: ${({ theme }) => theme.primaryBlack};
+  background: ${({ theme }) => theme.primaryYellow};
+  margin-bottom: 20px;
+
+  &:hover {
+    color: ${({ theme }) => theme.primaryYellow};
+    background: ${({ theme }) => theme.lightYellow};
+  }
+
+  @media screen and (min-width: 1140px) {
+    font-size: 18px;
+    padding: 16px 88px;
+    width: 267px;
+    height: 60px;
+    margin-bottom: 0;
+  }
+`;
+
+// -------------------IMAGE------------------------
+export const ImageContainer = styled.div`
   position: relative;
   border-radius: 30px;
-  background: var(--latte-bg);
-  width: 568px;
-  height: 400px;
-  width: 100%;
+  max-width: 568px;
+  height: 450px;
+  background: ${({ theme }) => theme.lightYellow};
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1140px) {
     width: 568px;
     height: 530px;
   }
-`; 
+`;
 
-export const HeroImgFace = styled.img`
- position: absolute;
-  top: 80px;
-  left: 50%;
-  transform: translate(-50%);
+export const ImgGirlSvg = styled(GirlSvg)`
+  left: 25%;
+  width: 250px;
+  margin-top: 50px;
 
-  width: 242px;
-  height: 242px;
-
-  @media screen and (min-width: 1440px) {
-    width: 339px;
-    height: 339px;
+  @media screen and (min-width: 1140px) {
+    margin-left: 114px;
+    margin-top: 80px;
+    width: auto;
+    height: auto;
   }
-` ;
- 
-export const HeroImgLeptop = styled.img`
-position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%);
+`;
 
-  width: 256px;
-  height: 125px;
+export const ImgMacYellSvg = styled(MacYellSvg)`
+  position: absolute;
+  left: 0;
+  top: 270px;
+  z-index: 1;
+  width: 250px;
 
-  @media screen and (min-width: 1440px) {
-    width: 359px;
-    height: 176px;
+  @media screen and (min-width: 1140px) {
+    top: 354px;
+    left: 105px;
+    width: auto;
   }
-` ;
-  
+`;
 
+// ------------BENEFITS--------------------------
 
-export const StatisticListBox = styled.div`
-  border-radius: 30px;
-  border: 1.5px dashed var(--accent-color);
+export const BenefitsContainer = styled.div`
+  background-image: url(${require('../../icons/rectangle-yellow3.png')});
+  margin-top: 24px;
   width: 100%;
-
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  
+  @media screen and (min-width: 768px) {
+    background-image: url(${require('../../icons/rectangle-yellow.png')});
+    background-size: contain;
+    height: 100%;
+padding: 25px;
+    margin-left: 0px;
+  }
+
+  @media screen and (min-width: 1400px) {
+    padding: 40px 122px 40px 123px;
+    /* width: 1312px; */
+    width: 100%;
+    margin-left: 30px;
+  }
+`;
+
+export const BenefitsList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 0;
+  }
+`;
+
+export const BenefitsItem = styled.li`
+  display: flex;
+  gap: 16px;
   justify-content: center;
   align-items: center;
 `;
 
-export const StatisticList = styled.ul`
- display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-
-  gap: 24px;
-  padding: 40px 20px;
-
-  @media screen and (min-width: 320px) {
-    width: 300px;
-  }
-
-  @media screen and (min-width: 768px) {
-    width: 640px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    padding: 40px 122px;
-    width: 1312px;
-    height: 116px;
-    flex-shrink: 0;
-  }
-` ;
- 
-  
-
-
-export const StatisticItem = styled.li`
-  display: flex;
-  gap: 16px;
-`; 
-
-export const StatisticNamber = styled.p`
-color: #121417;
-  font-family: Roboto;
-  font-size: 28px;
-  font-style: normal;
+export const Nubers = styled.p`
   font-weight: 500;
-  line-height: 32px;
-  letter-spacing: -0.56px;
-` ;
-  
-export const StatisticText = styled.p`
-  width: 96px;
-  color: rgba(18, 20, 23, 0.7);
-  font-family: Roboto;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 18px;
-  letter-spacing: -0.28px;
-` ;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+  font-size: 20px;
 
+  @media screen and (min-width: 1140px) {
+    font-size: 28px;
+  }
+`;
+export const BenefitsText = styled.p`
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: rgba(18, 20, 23, 0.7);
+  white-space: pre-line;
+`;
+
+export const NewLine = styled.span`
+  display: block;
+`;

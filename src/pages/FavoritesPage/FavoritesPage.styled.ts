@@ -1,19 +1,17 @@
-import styled from '@emotion/styled';
-// import { Background } from '<div styleName=';
+import styled from 'styled-components';
 
-const Background = styled.div`
-
-background: linear-gradient(50deg, #49a09d, #5f2c82);
-font-family: sans-serif;
-font-weight: 100;
-display: flex;
-// padding-top: 830px;
-flex-direction: column;
-align-content: space-around;
-flex-wrap: wrap;
-padding-bottom: 166px;
-padding-left: 15px;
-padding-right: 15px;
+export const FavoritesContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
 `;
 
-export {Background};
+export const Text = styled.p`
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  margin-top: 40px;
+  text-align: center;
+`;
