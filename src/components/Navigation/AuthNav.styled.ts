@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import LogIn  from '../../assets/log-in-01.svg';
-import  LogOut  from '../../assets/log-out.svg';
+import LogIn  from '../../assets/log-in-01.svg?url';
+import  LogOut  from '../../assets/log-out.svg?url';
 import { NavLink } from 'react-router-dom';
 
 export const AuthContainer = styled.div`
