@@ -24,14 +24,10 @@ import {
   BtnSubmit,
 } from '../Modal/Modal.styled';
 
-import { Teacher } from '../../redux/types';
+import { BookTrialProps } from '../../redux/types';
 
-interface BookProps {
-  teacher: Teacher;
-  close: () => void;
-}
 
-export const BookTrialModal: React.FC<BookProps> = ({ teacher, close }) => {
+export const BookTrialModal: React.FC<BookTrialProps> = ({ teacher, close }) => {
   const [nameEntered, setNameEntered] = useState(false);
   const [emailEntered, setEmailEntered] = useState(false);
   const [phoneEntered, setPhoneEntered] = useState(false);

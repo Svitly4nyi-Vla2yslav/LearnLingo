@@ -69,7 +69,7 @@ export const Layout: React.FC<LayoutProps> = ({authUser}) => {
       {isOpen && (
         <Modal toggleModal={toggleModal}>
           {loginModal && <Login close={close} />}
-          {registerModal && <Register close={close} />}
+          {registerModal && <Register close={close} name={''} email={''} password={''} />}
         </Modal>
       )}
     </LayoutWrap>

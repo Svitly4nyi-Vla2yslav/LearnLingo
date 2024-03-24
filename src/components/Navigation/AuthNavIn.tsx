@@ -7,7 +7,7 @@ import {
     NavLinkMenu,
     NavListMenu,
   } from './AuthNav.styled';
-  import LogIn  from '../../assets/log-in-01.svg?url';
+  import LogIn  from '../../assets/log-in-01.svg';
 
   interface AuthNavInProps{
     onClickLogin: () => void;

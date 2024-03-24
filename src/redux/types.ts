@@ -1,18 +1,9 @@
 
-export interface SearchParams {
-  languages?: string;
-  level?: string;
-  price?: string;
-  page?: string;
-  attention?: string;
-  trial?: string;
-  id?: string;
-}
-
 export interface RegisterParamsApi {
   name: string;
   email: string;
   password: string;
+  close: () => void;
 }
 export interface LoginParamsApi {
   email: string;
@@ -55,25 +46,14 @@ export interface InitialState {
   error: string | null;
 };
 
-// export interface BookFormValues {
-//   picked: string;
-//   name: string;
-//   email: string;
-//   phone: string;
-// }
-
-// export interface TeacherAvatarProps {
-//   name: string;
-//   surname: string;
-//   avatarUrl: string;
- 
-// }
 
 export interface BookTrialProps {
-  name: string;
-  surname: string;
-  avatarUrl: string;
-  id: string;
+  name?: string;
+  surname?: string;
+  avatarUrl?: string;
+  id?: string;
+  close: () => void;
+  teacher: Teacher;
 }
 
 export interface AddFavoritesProps {

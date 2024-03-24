@@ -294,3 +294,8 @@ export const BookBtn = styled.button`
     background: ${({ theme }) => theme.primaryLightYellow};
   }
 `;
+
+export const Star = styled.img`
+`;
+export const Book = styled.img`
+`;

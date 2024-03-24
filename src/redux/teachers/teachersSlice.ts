@@ -24,16 +24,16 @@ export const teachersSlice = createSlice({
     reducers: {},
 
     extraReducers: builder => {
-        builder
-            .addCase(fetchTeachers.pending, handlePending)
-            .addCase(fetchTeachers.fulfilled, (state, action) => {
-                state.isLoading = false;
-                state.error = null;
-                state.items = action.payload;
-            })
-            .addCase(fetchTeachers.rejected, handleRejected);
+      builder
+        .addCase(fetchTeachers.pending, handlePending)
+        .addCase(fetchTeachers.fulfilled, (state, action) => {
+          state.isLoading = false;
+          state.error = null;
+          state.items = action.payload;
+        })
+        .addCase(fetchTeachers.rejected, handleRejected);
     },
-});
+  });
 
 const persistConfig = {
     key: "teachers",

@@ -1,8 +1,8 @@
 import React, { ReactNode } from 'react';
 import { createPortal } from 'react-dom';
-import { BtnClose, ModalContainer, OverLay } from './Modal.styled';
+import { BtnClose, CloseBtnSvg, ModalContainer, OverLay } from './Modal.styled';
 import { useEffect } from 'react';
-import  CloseBtnSvg  from "../../assets/close.svg"
+import  CloseSvg  from "../../assets/close.svg"
 
 interface ModalProps {
     children: ReactNode;
@@ -39,7 +39,7 @@ export const Modal: React.FC<ModalProps> = ({ children, toggleModal }) => {
     <OverLay onMouseDown={onClickBackdrop}>
       <ModalContainer>
         <BtnClose onClick={toggleModal} type="button">
-          <CloseBtnSvg />
+          <CloseBtnSvg src={CloseSvg} alt='Close'/>
         </BtnClose>
         {children}
       </ModalContainer>

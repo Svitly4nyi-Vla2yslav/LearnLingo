@@ -1,6 +1,5 @@
 import { ErrorMessage, Field, Form} from 'formik';
 import styled from 'styled-components';
-import  GoogleSvg  from '../../assets/google.svg';
 
 export const OverLay = styled.div`
   position: fixed;
@@ -10,6 +9,10 @@ export const OverLay = styled.div`
   height: 100%;
   z-index: 100;
   background: rgba(0, 0, 0, 0.2);
+
+`;
+
+export const CloseBtnSvg = styled.img`
 
 `;
 
@@ -163,7 +166,7 @@ color: rgba(18, 20, 23, 0.8);
 }
 
 `
-export const BtnGoogleSvg = styled(GoogleSvg)`
+export const BtnGoogleSvg = styled.img`
 width: 20px;
 height: 20px;
 `;

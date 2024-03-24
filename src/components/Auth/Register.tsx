@@ -7,14 +7,14 @@
   import { AuthProvider } from './AuthProvider';
   import toast from 'react-hot-toast';
 import { Title, FormStyle, FieldStyle, ErrMsg, BtnSubmit, Text } from '../Modal/Modal.styled';
-import { AuthProviderProps } from '../../redux/types';
+import {  RegisterParamsApi } from '../../redux/types';
   
-  export const Register: React.FC<AuthProviderProps> = ({close}) => {
+  export const Register: React.FC<RegisterParamsApi> = ({close}) => {
     const [nameEntered, setNameEntered] = useState(false);
     const [emailEntered, setEmailEntered] = useState(false);
     const [passwordEntered, setPasswordEntered] = useState(false);
   
-    const handleSubmit = values => {
+    const handleSubmit = (values: { email: any; password: any; }) => {
       const {email, password } = values;
   
       createUserWithEmailAndPassword(auth,  email, password)
