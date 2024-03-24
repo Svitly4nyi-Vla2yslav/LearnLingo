@@ -23,10 +23,10 @@ export const Login: React.FC<AuthProviderProps> = ({close}) => {
     const { email, password } = values;
 
     signInWithEmailAndPassword(auth, email, password)
-      .then(userCredential => {
+      .then(_userCredential => {
         close();
       })
-      .catch(err => {
+      .catch(_err => {
         toast.error(" SORRY, COULDN'T FIND YOUR ACCOUNT")
       });
   };

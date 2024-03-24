@@ -16,6 +16,10 @@ export interface UserData {
   email: string | null;
 }
 
+export interface CardListProps{
+  authUser: () => void;
+   teachers: Teacher;
+}
 export interface Review {
   photo: string | undefined;
   reviewer_name: string;
