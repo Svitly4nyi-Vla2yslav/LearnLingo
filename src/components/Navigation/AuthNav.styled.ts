@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import LogIn  from '../../assets/log-in-01.svg?url';
-import  LogOut  from '../../assets/log-out.svg?url';
 import { NavLink } from 'react-router-dom';
 
 export const AuthContainer = styled.div`
@@ -54,13 +52,13 @@ export const LogBtn = styled.button`
   }
 `;
 
-export const LogInSvg = styled(LogIn)`
+export const LogInSvg = styled.img`
   width: 20px;
   height: 20px;
   stroke: ${({ theme }) => theme.primaryYellow};
 `;
 
-export const LogOutSvg = styled(LogOut)`
+export const LogOutSvg = styled.img`
   width: 20px;
   height: 20px;
   stroke: ${({ theme }) => theme.primaryYellow};

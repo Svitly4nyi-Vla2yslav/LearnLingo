@@ -13,7 +13,7 @@ import { Modal } from '../Modal/Modal';
 import { Navigation } from '../Navigation/Navigation';
 import { Login } from '../Auth/Login';
 import { Register } from '../Auth/Register';
-
+import UkraineSvg from '/src/assets/ukraine.svg';
 interface LayoutProps {
     authUser: any | undefined | null; 
   }
@@ -48,7 +48,7 @@ export const Layout: React.FC<LayoutProps> = ({authUser}) => {
         <NavList>
           <li>
             <NavLink to="/">
-              <LogoSvg />
+            <LogoSvg src={UkraineSvg} alt="Ukraine Logo" />
             </NavLink>
           </li>
           <li>

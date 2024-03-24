@@ -7,6 +7,7 @@ import {
     NavLinkMenu,
     NavListMenu,
   } from './AuthNav.styled';
+  import LogIn  from '../../assets/log-in-01.svg?url';
 
   interface AuthNavInProps{
     onClickLogin: () => void;
@@ -28,7 +29,7 @@ import {
           <NavList>
             <li>
               <LogBtn type="button" onClick={onClickLogin}>
-                <LogInSvg  />
+                <LogInSvg src={LogIn} alt='Login' />
                 Log in
               </LogBtn>
             </li>

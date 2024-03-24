@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import   Logo  from '/src/assets/ukraine.svg?url';
+
 import { Link } from 'react-router-dom';
 
 export const LayoutWrap = styled.div`
@@ -31,7 +31,7 @@ margin-bottom: 30px;
 }
 `;
 
-export const LogoSvg = styled(Logo)`
+export const LogoSvg = styled.img`
   width: 28px;
   height: 28px;
   margin-right: 8px;

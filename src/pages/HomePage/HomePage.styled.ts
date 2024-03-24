@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import  GirlSvg from '../../assets/girl.svg';
-import MacYellSvg  from '../../assets/iMac-yellow.svg';
-
+import rectangleYellow3 from '../../assets/rectangle-yellow3.png';
+import rectangleYellow from '../../assets/rectangle-yellow.png';
 import { Link } from 'react-router-dom';
 
 export const HomeContainer = styled.div`
@@ -121,7 +120,7 @@ export const ImageContainer = styled.div`
   }
 `;
 
-export const ImgGirlSvg = styled(GirlSvg)`
+export const ImgGirlSvg = styled.img`
   left: 25%;
   width: 250px;
   margin-top: 50px;
@@ -134,7 +133,7 @@ export const ImgGirlSvg = styled(GirlSvg)`
   }
 `;
 
-export const ImgMacYellSvg = styled(MacYellSvg)`
+export const ImgMacYellSvg = styled.img`
   position: absolute;
   left: 0;
   top: 270px;
@@ -151,7 +150,7 @@ export const ImgMacYellSvg = styled(MacYellSvg)`
 // ------------BENEFITS--------------------------
 
 export const BenefitsContainer = styled.div`
-  background-image: url(${require('../../icons/rectangle-yellow3.png')});
+background-image: url(${rectangleYellow3});
   margin-top: 24px;
   width: 100%;
   height: 100%;
@@ -165,10 +164,10 @@ export const BenefitsContainer = styled.div`
   padding-bottom: 30px;
   
   @media screen and (min-width: 768px) {
-    background-image: url(${require('../../icons/rectangle-yellow.png')});
+    background-image: url(${rectangleYellow});
     background-size: contain;
     height: 100%;
-padding: 25px;
+    padding: 25px;
     margin-left: 0px;
   }
 
