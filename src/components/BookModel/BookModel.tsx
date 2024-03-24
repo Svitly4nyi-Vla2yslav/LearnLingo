@@ -26,8 +26,10 @@ import {
 
 import { BookTrialProps } from '../../redux/types';
 
-
-export const BookTrialModal: React.FC<BookTrialProps> = ({ teacher, close }) => {
+export const BookTrialModal: React.FC<BookTrialProps> = ({
+  teacher,
+  close,
+}) => {
   const [nameEntered, setNameEntered] = useState(false);
   const [emailEntered, setEmailEntered] = useState(false);
   const [phoneEntered, setPhoneEntered] = useState(false);
@@ -81,7 +83,7 @@ export const BookTrialModal: React.FC<BookTrialProps> = ({ teacher, close }) => 
         onSubmit={handleSubmit}
         validationSchema={BookLessonSchema}
       >
-        {({ }) => (
+        {({}) => (
           <FormStyle>
             <RadioBlock role="group" aria-labelledby="my-radio-group">
               <RadioBtnLabel>

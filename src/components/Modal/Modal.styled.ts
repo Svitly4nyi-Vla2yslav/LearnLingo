@@ -1,4 +1,4 @@
-import { ErrorMessage, Field, Form} from 'formik';
+import { ErrorMessage, Field, Form } from 'formik';
 import styled from 'styled-components';
 
 export const OverLay = styled.div`
@@ -35,7 +35,6 @@ export const ModalContainer = styled.div`
    }
 
 `;
-
 
 export const BtnClose = styled.button`
   width: 32px;
@@ -91,24 +90,23 @@ height: 54px;
 width: 100%;
 
 &::placeholder {
-  color: ${({theme}) => theme.primaryBlack};
+  color: ${({ theme }) => theme.primaryBlack};
 }
 
 &:hover{
   outline: none;
-  border-color: ${({theme}) => theme.primaryYellow};
+  border-color: ${({ theme }) => theme.primaryYellow};
 }
 
 &:focus {
   outline: none;
-  border-color: ${({theme}) => theme.primaryYellow};
+  border-color: ${({ theme }) => theme.primaryYellow};
 }
 
 
 @media screen and (min-width: 768px) {
   width: 438px;
-  
-  
+
 }
 `
 
@@ -124,14 +122,14 @@ border-radius: 12px;
 padding: 16px;
 width: 100%;
 height: 60px;
-background: ${({theme}) => theme.primaryYellow};
+background: ${({ theme }) => theme.primaryYellow};
 font-weight: 700;
 font-size: 18px;
 line-height: 1.56;
-color: ${({theme}) => theme.primaryBlack};
+color: ${({ theme }) => theme.primaryBlack};
 
 &:hover {
-  background: ${({theme}) => theme.primaryLightYellow};
+  background: ${({ theme }) => theme.primaryLightYellow};
 }
 
 @media screen and (min-width: 768px) {
@@ -158,7 +156,7 @@ line-height: 1.37;
 color: rgba(18, 20, 23, 0.8);
 
 &:hover {
-  border-color: ${({theme}) => theme.primaryYellow};
+  border-color: ${({ theme }) => theme.primaryYellow};
 }
 @media screen and (min-width: 768px) {
   width: 438px;

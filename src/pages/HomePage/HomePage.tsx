@@ -16,10 +16,8 @@ import {
   Text,
   Title,
 } from './HomePage.styled';
-import  GirlSvg from '../../assets/girl.svg';
-import MacYellSvg  from '../../assets/iMac-yellow.svg';
-
-
+import GirlSvg from '../../assets/girl.svg';
+import MacYellSvg from '../../assets/iMac-yellow.svg';
 
 const Home: React.FC = () => {
   return (
@@ -37,27 +35,35 @@ const Home: React.FC = () => {
           <LinkStart to="/teachers">Get started</LinkStart>
         </StartContainer>
         <ImageContainer>
-          <ImgGirlSvg src={GirlSvg} alt='Girl' />
-          <ImgMacYellSvg src={MacYellSvg} alt='LapTop'/>
+          <ImgGirlSvg src={GirlSvg} alt="Girl" />
+          <ImgMacYellSvg src={MacYellSvg} alt="LapTop" />
         </ImageContainer>
       </InfoContainer>
       <BenefitsContainer>
         <BenefitsList>
           <BenefitsItem>
             <Nubers>32,000 +</Nubers>
-            <BenefitsText>Experienced <NewLine>tutors</NewLine></BenefitsText>
+            <BenefitsText>
+              Experienced <NewLine>tutors</NewLine>
+            </BenefitsText>
           </BenefitsItem>
           <BenefitsItem>
             <Nubers>300,000 +</Nubers>
-            <BenefitsText>5-star tutor <NewLine>reviews</NewLine></BenefitsText>
+            <BenefitsText>
+              5-star tutor <NewLine>reviews</NewLine>
+            </BenefitsText>
           </BenefitsItem>
           <BenefitsItem>
             <Nubers>120 +</Nubers>
-            <BenefitsText>Subjects <NewLine>taught</NewLine></BenefitsText>
+            <BenefitsText>
+              Subjects <NewLine>taught</NewLine>
+            </BenefitsText>
           </BenefitsItem>
           <BenefitsItem>
             <Nubers>200 +</Nubers>
-            <BenefitsText>Tutor <NewLine>nationalities</NewLine></BenefitsText>
+            <BenefitsText>
+              Tutor <NewLine>nationalities</NewLine>
+            </BenefitsText>
           </BenefitsItem>
         </BenefitsList>
       </BenefitsContainer>

@@ -9,13 +9,13 @@ import {
   LogOutSvg,
 } from './AuthNav.styled';
 import { auth } from '../../firebase';
-import  LogOut  from '../../assets/log-out.svg?url';
+import LogOut from '../../assets/log-out.svg?url';
 
 export const AuthNavOut: React.FC = () => {
   const currentUser = auth.currentUser;
 
   const handleLogOUt = () => {
-    signOut(auth)
+    signOut(auth);
   };
 
   return (
@@ -33,11 +33,11 @@ export const AuthNavOut: React.FC = () => {
       </NavListMenu>
       <AuthContainer>
         <NavList>
-        <TextItem>{currentUser?.displayName ?? 'User'}</TextItem>
+          <TextItem>{currentUser?.displayName ?? 'User'}</TextItem>
           <li>
             <LogBtn onClick={handleLogOUt}>
               Log out
-              <LogOutSvg src={LogOut}  alt='LogOut'/>
+              <LogOutSvg src={LogOut} alt="LogOut" />
             </LogBtn>
           </li>
         </NavList>

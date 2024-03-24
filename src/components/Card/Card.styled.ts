@@ -265,6 +265,9 @@ export const LevelItem = styled.li`
   border-radius: 35px;
   padding: 8px 12px;
   height: 100%;
+   &:hover {
+    background: ${({ theme }) => theme.primaryLightYellow};
+  }
 `;
 
 export const RatingBlock = styled.div`
@@ -282,9 +285,9 @@ export const ReviewText = styled.p`
 export const BookBtn = styled.button`
   font-weight: 700;
   font-size: 18px;
-  line-height: 156%;
+  // line-height: 156%;
   border-radius: 12px;
-  padding: 16px 48px;
+  // padding: 16px 48px;
   width: 232px;
   height: 60px;
   background: ${({ theme }) => theme.primaryYellow};

@@ -4,9 +4,6 @@ import { setFavorites } from './favoritesSlice.js';
 import { AddFavoritesProps, deleteFavoriteProps } from '../types.js';
 import { db } from '../../firebase.js';
 
-
-
-
 export const addFavorite = createAsyncThunk(
     'favorites/addFavorite',
     async ({ userId, teacher }: AddFavoritesProps) => {
@@ -27,7 +24,7 @@ export const addFavorite = createAsyncThunk(
 
 export const fetchFavorites = createAsyncThunk(
     'favorites/fetchFavorites',
-    async (userId: string , { dispatch }) => {
+    async (userId: string, { dispatch }) => {
         try {
             const userFavoritesRef = ref(db, `users/${userId}/favorites`);
             onValue(userFavoritesRef, (snapshot) => {

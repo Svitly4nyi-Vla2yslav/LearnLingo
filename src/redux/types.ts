@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 
 export interface RegisterParamsApi {
   name: string;
@@ -37,7 +38,6 @@ export interface Teacher {
   conditions: string[];
   experience: string;
   favorite: boolean;
-
 }
 
 export interface InitialState {
@@ -45,8 +45,6 @@ export interface InitialState {
   isLoading: boolean;
   error: string | null;
 };
-
-
 export interface BookTrialProps {
   name?: string;
   surname?: string;
@@ -62,9 +60,28 @@ export interface AddFavoritesProps {
 }
 
 export interface deleteFavoriteProps {
-  userId:  string | string[] ;
-  teacherId: string ;
+  userId: string | string[];
+  teacherId: string;
 }
 export interface AuthProviderProps {
   close: () => void;
+}
+
+export interface NavigationProps {
+  onClickLogin: () => void;
+  onClickRegister: () => void;
+  authUser: any;
+}
+export interface LayoutProps {
+  authUser: any | undefined | null;
+}
+
+export interface ModalProps {
+  children: ReactNode;
+  toggleModal: () => void;
+}
+
+export interface AuthNavInProps {
+  onClickLogin: () => void;
+  onClickRegister: () => void;
 }

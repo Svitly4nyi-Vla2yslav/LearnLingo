@@ -15,8 +15,6 @@ export const NavList = styled.ul`
   @media screen and (min-width: 1140px) {
   gap: 16px;
 }
-
-
 `;
 
 export const RegBtn = styled.button`

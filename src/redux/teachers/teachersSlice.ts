@@ -19,28 +19,28 @@ const handleRejected = (state, action) => {
 };
 
 export const teachersSlice = createSlice({
-    name: 'teachers',
-    initialState,
-    reducers: {},
+  name: 'teachers',
+  initialState,
+  reducers: {},
 
-    extraReducers: builder => {
-      builder
-        .addCase(fetchTeachers.pending, handlePending)
-        .addCase(fetchTeachers.fulfilled, (state, action) => {
-          state.isLoading = false;
-          state.error = null;
-          state.items = action.payload;
-        })
-        .addCase(fetchTeachers.rejected, handleRejected);
-    },
-  });
+  extraReducers: builder => {
+    builder
+      .addCase(fetchTeachers.pending, handlePending)
+      .addCase(fetchTeachers.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = null;
+        state.items = action.payload;
+      })
+      .addCase(fetchTeachers.rejected, handleRejected);
+  },
+});
 
 const persistConfig = {
-    key: "teachers",
-    storage,
+  key: "teachers",
+  storage,
 };
 
 export const persistedTeacherReducer = persistReducer(
-    persistConfig,
-    teachersSlice.reducer
+  persistConfig,
+  teachersSlice.reducer
 );

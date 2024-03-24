@@ -14,11 +14,9 @@ import { Navigation } from '../Navigation/Navigation';
 import { Login } from '../Auth/Login';
 import { Register } from '../Auth/Register';
 import UkraineSvg from '/src/assets/ukraine.svg';
-interface LayoutProps {
-    authUser: any | undefined | null; 
-  }
+import { LayoutProps } from '../../redux/types';
 
-export const Layout: React.FC<LayoutProps> = ({authUser}) => {
+export const Layout: React.FC<LayoutProps> = ({ authUser }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [loginModal, setLoginModal] = useState(false);
   const [registerModal, setRegisterModal] = useState(false);
@@ -48,7 +46,7 @@ export const Layout: React.FC<LayoutProps> = ({authUser}) => {
         <NavList>
           <li>
             <NavLink to="/">
-            <LogoSvg src={UkraineSvg} alt="Ukraine Logo" />
+              <LogoSvg src={UkraineSvg} alt="Ukraine Logo" />
             </NavLink>
           </li>
           <li>
@@ -56,20 +54,22 @@ export const Layout: React.FC<LayoutProps> = ({authUser}) => {
           </li>
         </NavList>
         <Navigation
-        authUser={authUser}
+          authUser={authUser}
           onClickLogin={onClickLogin}
           onClickRegister={onClickRegister}
         />
       </HeaderContainer>
       <Suspense>
-        <Outlet  />
+        <Outlet />
       </Suspense>
       <Toaster position="top-right" reverseOrder={false} />
 
       {isOpen && (
         <Modal toggleModal={toggleModal}>
           {loginModal && <Login close={close} />}
-          {registerModal && <Register close={close} name={''} email={''} password={''} />}
+          {registerModal && (
+            <Register close={close} name={''} email={''} password={''} />
+          )}
         </Modal>
       )}
     </LayoutWrap>

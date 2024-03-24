@@ -115,14 +115,14 @@ export const Card: React.FC<{ teacher: Teacher; authUser: any }> = ({
             <DataItem>
               <ElementsContainer>
                 {' '}
-                <Book src={BookSvg} alt='📖' /> Lessons online
+                <Book src={BookSvg} alt="📖" /> Lessons online
               </ElementsContainer>
             </DataItem>
             <DataItem>Lessons done: {teacher.lessons_done}</DataItem>
             <DataItem>
               <ElementsContainer>
                 {' '}
-                <Star src={StarSvg} alt='⭐' /> Rating: {teacher.rating}
+                <Star src={StarSvg} alt="⭐" /> Rating: {teacher.rating}
               </ElementsContainer>
             </DataItem>
             <DataItem>

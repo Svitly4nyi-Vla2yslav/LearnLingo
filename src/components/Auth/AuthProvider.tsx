@@ -1,28 +1,26 @@
-import {signInWithPopup } from 'firebase/auth';
+import { signInWithPopup } from 'firebase/auth';
 import { auth, googleAuthProvider } from '../../firebase';
 import toast from 'react-hot-toast';
 import { BtnSubmitGoogle, BtnGoogleSvg } from '../Modal/Modal.styled';
 import { AuthProviderProps } from '../../redux/types';
-import  GoogleSvg  from '../../assets/google.svg';
+import GoogleSvg from '../../assets/google.svg';
 
 
-
-export const AuthProvider: React.FC<AuthProviderProps> = ({close}) => {
-
+export const AuthProvider: React.FC<AuthProviderProps> = ({ close }) => {
   function handleSubmitwithGoogle() {
     signInWithPopup(auth, googleAuthProvider)
-      .then((userCredential) => {
+      .then(_userCredential => {
         close();
       })
-      .catch((err) => {
-        toast.error(" SORRY, COULDN'T FIND YOUR ACCOUNT")
+      .catch(_err => {
+        toast.error(" SORRY, COULDN'T FIND YOUR ACCOUNT");
       });
   }
 
   return (
     <BtnSubmitGoogle onClick={handleSubmitwithGoogle}>
-    <BtnGoogleSvg src={GoogleSvg} alt='Google' />
-    Continue with Google
-  </BtnSubmitGoogle>
-  )
+      <BtnGoogleSvg src={GoogleSvg} alt="Google" />
+      Continue with Google
+    </BtnSubmitGoogle>
+  );
 };
