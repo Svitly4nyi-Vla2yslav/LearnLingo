@@ -25,7 +25,7 @@ const theme = {
 }
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <BrowserRouter basename="/LearnLingo">
+  <BrowserRouter basename="/">
   <Provider store={store}>
      <ThemeProvider theme={theme}>
        <App />

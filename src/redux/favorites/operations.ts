@@ -1,9 +1,10 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { get, getDatabase, onValue, ref, set } from 'firebase/database';
+import { get, onValue, ref, set } from 'firebase/database';
 import { setFavorites } from './favoritesSlice.js';
 import { AddFavoritesProps, deleteFavoriteProps } from '../types.js';
+import { db } from '../../firebase.js';
 
-const db = getDatabase();
+
 
 
 export const addFavorite = createAsyncThunk(

@@ -30,8 +30,8 @@ import {
   TeacherPhoto,
   Text,
 } from './Card.styled';
-import  Book from '../../assets/book-open.svg';
-import  Star  from '../../assets/star.svg';
+import  Book from '../../assets/book-open.svg?url';
+import  Star  from '../../assets/star.svg?url';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectFavorites } from '../../redux/selectors';
 import {

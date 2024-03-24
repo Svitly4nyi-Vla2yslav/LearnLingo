@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import   Logo  from '../../assets/ukraine.svg';
+import   Logo  from '/src/assets/ukraine.svg?url';
 import { Link } from 'react-router-dom';
 
 export const LayoutWrap = styled.div`

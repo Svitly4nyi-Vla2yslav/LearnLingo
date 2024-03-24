@@ -15,7 +15,7 @@ import { Login } from '../Auth/Login';
 import { Register } from '../Auth/Register';
 
 interface LayoutProps {
-    authUser: any; 
+    authUser: any | undefined | null; 
   }
 
 export const Layout: React.FC<LayoutProps> = ({authUser}) => {

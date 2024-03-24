@@ -10,7 +10,7 @@ const Home = lazy(() => import('./pages/HomePage/HomePage'));
 const Teachers = lazy(() => import('./pages/Teachers/Teachers'));
 const Favorites = lazy(() => import('./pages/FavoritesPage/FavoritesPage'));
 
-export const App = () => {
+export const App: React.FC = () => {
   const [authUser, setAuthUset] = useState(auth.currentUser);
 
   useEffect(() => {

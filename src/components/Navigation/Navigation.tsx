@@ -1,4 +1,5 @@
 import { AuthNavIn } from "./AuthNavIn";
+import { AuthNavOut } from "./AuthNavOut";
 
 
 interface NavigationProps{
