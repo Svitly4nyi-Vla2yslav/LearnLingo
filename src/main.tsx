@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import { store } from './redux/store.ts';
 import { App } from './App.tsx';
 
+
 const theme = {
   primaryBlack: '#121417',
   primaryGray: '#8A8A89',
