@@ -7,8 +7,6 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-firebase-hosting-pull-request.yml
-firebase-hosting-merge.yml
 node_modules
 dist
 dist-ssr
