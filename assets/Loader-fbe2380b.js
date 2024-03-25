@@ -1,4 +1,4 @@
-import{u as n,R as h,F as A,r as g,d as K,e as k,g as G,j as t,h as V,i as J,E as j,k as $,B as Q,_ as P,a as X,b as Z,M as U,l as ee,m as te,n as L}from"./index-86f172a5.js";const at=e=>e.teacher.items,lt=e=>e.teacher.isLoading,dt=e=>e.teacher.error,ie=e=>e.favorites.items,ct=e=>e.favorites.isLoading,pt=e=>e.favorites.error,ne=n.ul`
+import{u as n,R as h,F as A,r as g,d as K,e as k,g as G,j as t,h as V,i as J,E as j,k as $,B as Q,_ as P,a as X,b as Z,M as U,l as ee,m as te,n as L}from"./index-4b0ce134.js";const at=e=>e.teacher.items,lt=e=>e.teacher.isLoading,dt=e=>e.teacher.error,ie=e=>e.favorites.items,ct=e=>e.favorites.isLoading,pt=e=>e.favorites.error,ne=n.ul`
  display: flex;
  mask-type: 28px;
  flex-direction: column;
