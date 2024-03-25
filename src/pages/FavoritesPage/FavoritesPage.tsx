@@ -6,6 +6,10 @@ import { MyLoader } from '../../components/Loader/Loader';
 import { fetchFavorites } from '../../redux/favorites/operations';
 import { selectFavorites, selectIsLoadingFav, selectErrorFav } from '../../redux/selectors';
 import { AppDispatch } from '../../redux/store';
+import { ImageContainer, ImgGirlSvg, ImgMacYellSvg } from '../HomePage/HomePage.styled';
+import GirlSvg from '../../assets/girl.svg';
+import MacYellSvg from '../../assets/iMac-yellow.svg';
+
 interface FavoriteProps{
   authUser: any;
 }
@@ -29,7 +33,10 @@ const errorFav = useSelector(selectErrorFav);
     {favorites.length > 0 ? (
         <CardList teachers={favorites} authUser={authUser} />
       ) : (
-        <Text>Favorite teachers haven't been selected yet</Text>
+        <><ImageContainer>
+            <ImgGirlSvg src={GirlSvg} alt="Girl" />
+            <ImgMacYellSvg src={MacYellSvg} alt="LapTop" />
+          </ImageContainer><Text>Favorite teachers haven't been selected yet 😒</Text></>
       )}
     </FavoritesContainer>
   );

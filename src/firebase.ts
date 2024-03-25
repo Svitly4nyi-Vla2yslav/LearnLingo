@@ -22,10 +22,10 @@ const googleAuthProvider = new GoogleAuthProvider();
 const auth: Auth = getAuth(app);
 
 const db = getDatabase(app);
-console.log(db)
+
 const data = getFirestore(app);
 const dbRef = ref(getDatabase());
-console.log(dbRef)
+
 
 export { app, googleAuthProvider, db, data, auth, dbRef };
 

@@ -18,6 +18,7 @@ width: 232px;
 height: 60px;
 background: ${({ theme }) => theme.primaryYellow};
 margin-bottom: 32px;
+margin-top: 32px;
 
 &:hover {
   background: ${({theme}) => theme.primaryLightYellow};

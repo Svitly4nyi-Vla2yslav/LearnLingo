@@ -27,8 +27,18 @@ export const Register: React.FC<RegisterParamsApi> = ({ close }) => {
       .then(_userCredential => {
         close();
       })
-      .catch(_err => {
-        toast.error(' Sorry, Something went wrong! Try agani later!');
+      .catch(error => {
+        const errorCode = error.code;
+
+        if (errorCode === 'auth/email-already-in-use') {
+          toast.error('This email is already in use. Please try another one.');
+        } else if (errorCode === 'auth/weak-password') {
+          toast.error(
+            'The password is too weak. Please choose a stronger one.'
+          );
+        } else {
+          toast.error('Sorry, something went wrong! Please try again later.');
+        }
       });
   };
 

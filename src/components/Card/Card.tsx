@@ -34,6 +34,7 @@ import {
 } from './Card.styled';
 import BookSvg from '../../assets/book-open.svg?url';
 import StarSvg from '../../assets/star.svg?url';
+import face from "../../../public/face.png"
 import { useDispatch, useSelector } from 'react-redux';
 import { selectFavorites } from '../../redux/selectors';
 import { addFavorite, deleteFavorite } from '../../redux/favorites/operations';
@@ -175,7 +176,7 @@ export const Card: React.FC<{ teacher: Teacher; authUser: any }> = ({
                   <li key={index}>
                     <Reviewblock>
                       <ReviewerImg
-                        src={review.photo}
+                        src={face}
                         alt="avatar"
                         width="44"
                         height="44"
@@ -185,7 +186,7 @@ export const Card: React.FC<{ teacher: Teacher; authUser: any }> = ({
                         <p>{review.reviewer_name}</p>
                         <RatingBlock>
                           <Star />
-                          <p> {review.reviewer_rating}</p>
+                          <p> {review.reviewer_rating} ⭐</p>
                         </RatingBlock>
                       </ReviewRating>
                     </Reviewblock>

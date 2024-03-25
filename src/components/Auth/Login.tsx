@@ -21,16 +21,22 @@ export const Login: React.FC<AuthProviderProps> = ({close}) => {
 
   const handleSubmit = values => {
     const { email, password } = values;
-
+  
     signInWithEmailAndPassword(auth, email, password)
       .then(_userCredential => {
         close();
       })
-      .catch(_err => {
-        toast.error(" SORRY, COULDN'T FIND YOUR ACCOUNT")
+      .catch(error => {
+        const errorCode = error.code;
+        if (errorCode === 'auth/user-not-found') {
+          toast.error("User not found. Please check your email or sign up.");
+        } else if (errorCode === 'auth/wrong-password') {
+          toast.error("Invalid password. Please try again.");
+        } else {
+          toast.error("Sorry, couldn't log in. Please try again later.");
+        }
       });
   };
-
 
   const LoginSchema = Yup.object().shape({
     email: Yup.string().email('Invalid email').required('Required'),

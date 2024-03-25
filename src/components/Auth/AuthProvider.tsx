@@ -5,15 +5,22 @@ import { BtnSubmitGoogle, BtnGoogleSvg } from '../Modal/Modal.styled';
 import { AuthProviderProps } from '../../redux/types';
 import GoogleSvg from '../../assets/google.svg';
 
-
 export const AuthProvider: React.FC<AuthProviderProps> = ({ close }) => {
   function handleSubmitwithGoogle() {
     signInWithPopup(auth, googleAuthProvider)
       .then(_userCredential => {
         close();
       })
-      .catch(_err => {
-        toast.error(" SORRY, COULDN'T FIND YOUR ACCOUNT");
+      .catch(error => {
+        const errorCode = error.code;
+
+        if (errorCode === 'auth/popup-closed-by-user') {
+          toast.error('Popup window was closed by the user');
+        } else {
+          toast.error(
+            "Sorry, couldn't sign in with Google. Please try again later."
+          );
+        }
       });
   }
 
